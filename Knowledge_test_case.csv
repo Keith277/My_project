@@ -1,0 +1,32 @@
+Set up,"Run on chromium browser, set slow_mo=1000 and headless=False
+After loging successfully
+The user redirect to page https://cx-call-center-dev.talena.ai/client
+Click on tab "" Knowledge Management"" on sidebar
+The user redirect to page: https://cx-call-center-dev.talena.ai/knowledge  
+On the Knowledge page, execute the following scenarios:
+button Delete which has type is ""button"" and class name is ""lucide lucide-trash2 text-danger""
+Confirm button which has text ""Confirm""
+Cancel button which has text ""Cancel""
+button Dowload which has type is ""button"" and class name is ""lucide lucide-cloud-download""",,,,,,,,,,,,,,
+Test cases ID,Description,Pre-Condition,Browser,Test Steps,Test Data,Expected Result,Priority,Need AT?,Automated?,PIC Test,Result,,,,
+TC_01,Delete file successfully,,,"After login successfully
+Click on button Delete
+Display dialog, click on button ""Confirm""",,"User delete successfully
+The deleted data disappears from the table.",,,,,,,,,
+TC_02,Delete file fail,,,"After user login successfully 
+Click on button Delete
+Display dialog, click con button Cancel",,Close the dialog,,,,,,,,,
+TC_03,Download file,,,"After user login successfully 
+Click button Dowload
+Display dialog, click on button which has text ""Confirm""",,Dowload successfully,,,,,,,,,
+TC_04,Download file,,,"After user login successfully 
+Click on button Dowload
+Display dialog, click on button button which has text ""Cancel""",,Close the dialog,,,,,,,,,
+,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,

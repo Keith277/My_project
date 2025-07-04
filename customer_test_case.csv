@@ -1,0 +1,52 @@
+Set up,"After loging successfully
+Search bar which has placeholder is ""Search by customer name""
+Inquiry section which has locator is ""div.flex.flex-1.basis-0.flex-col.gap-3.overflow-auto""
+In Inquiry section has inquiry cards which has locator ""div.flex.flex-1.basis-0.flex-col.gap-3.overflow-auto a"" 
+total_inquiry which has locator is ""span.text-sm.font-medium.text-gray-900""
+Coversation section which has locator is ""div.flex.flex-1.basis-0.flex-col.gap-4.overflow-auto""
+button ""Test Chatbot"" which has locator with text is ""Test Chatbot""
+button ""Start Chat"" which has locator with text is ""Start Chat""
+chat bar which has placeholder is ""Chat with Mochi""
+button ""Add Source"" which has locator with text is ""Add Source""
+input div which has placeholder is ""Enter source name""
+button ""Add source"" which has locator with text is ""Add source""
+Customer_detail has locator ""div.mt-3.flex.flex-col.items-start.gap-3.lg\\:flex-row.lg\\:items-center"")",,,,,,,,,,,,,,
+Test cases ID,Description,Pre-Condition,Browser,Test Steps,Test Data,Expected Result,Priority,Need AT?,Automated?,PIC Test,Result,,,,
+TC_01,Checking table,,,"The user is redirect to https://cx-call-center-dev.talena.ai/client
+Get context name of currecy columns respectively: ""Customer"", ""Customer ID"", ""Phone Number"", ""Inquiry"", ""Last Inquiry Date""",,"Expect columns respectively: ""Customer"", ""Customer ID"", ""Phone Number"", ""Inquiry"", ""Last Inquiry Date"" the same Currency column",,,,,,,,,
+TC_02,Search successfully,,,"After login successfully
+Click on Search bar
+Input value = ""User"" on search bar",,"User can enter value on search bar
+Table results show a row containing ""user"" in the Customer column.",,,,,,,,,
+TC_03,Test customer detail,,,"After login sccessfully
+Click on link which has text is ""rye""
+User redirect to customer detail page:https://cx-call-center-dev.talena.ai/inquiry-history/7311293904849117185
+Set await = 15000 to wait for response",,"Display customer detail include: ""Client ID"", ""Phone"", ""Inquiry"", ""Last Inquiry Date"" on Customer detail",,,,,,,,,
+TC_04,Test number of inquiry card,,,Count the inquiry cards on inquiry section,,Number of inquiry card = value of total_inquiry,,,,,,,,,
+TC_05,test redirect inquiry,,,"In Inquiry section:
+Click on first inquiry_card. Get first conversation content
+Set await = 10000ms
+Click on 2nd inquiry_card. Get 2nd conversation content",,The conversation section changes content.,,,,,,,,,
+TC_06,Testing Chatbot,,,"Click on tab ""Knowledge Management""
+Click on button ""Test Chatbot""
+Click on button ""Start Chat""
+Set await = 10000ms
+Click on chat bar
+Input message: ""????????????????""
+Press Enter",,"Chatbot's message which has text: ""????????????????????????????????????????????????????????"" is visible",,,,,,,,,
+TC_07,Test Add Source successfully,,,"User redirect to https://cx-call-center-dev.talena.ai/knowledge
+Click on button ""Add Source""
+Input value ""Test3"" on input div
+Upload file device with file path is ""C:\Users\keith.nguyen\Downloads\Anastasiia Fomkina.pdf""
+Click on button ""Add source""",,"A file named ""Test 3"" exists in the table.",,,,,,,,,
+TC_08,Test Add Source failed with blank file,,,"User redirect to https://cx-call-center-dev.talena.ai/knowledge
+Click on button ""Add Source""
+Input value ""Test3"" on input div
+Click on button ""Add source""",,"Display error message: ""Required""",,,,,,,,,
+TC_09,Test Add Source failed with blank name,,,"User redirect to https://cx-call-center-dev.talena.ai/knowledge
+Click on button ""Add Source""
+Upload file device with file path is ""C:\Users\keith.nguyen\Downloads\Anastasiia Fomkina.pdf""
+Click on button ""Add source""",,"Display error message: ""Required""",,,,,,,,,
+,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,

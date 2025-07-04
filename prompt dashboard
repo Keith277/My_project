@@ -1,0 +1,46 @@
+Create a dashboard file using Streamlit to display test results. I want the following:
+
+Total number of test cases
+
+A button to run each individual test case and another to run all test cases
+
+Number of passed and failed tests
+
+A pie chart showing the percentage of passed/failed tests
+
+A detailed table for each test case including: test name, status (pass/fail), and execution time
+
+The data can be a list of dictionaries in Python. Please make the interface clean and easy to understand.
+The folder struct must follow this format:
+mcp-playwright-cx/
+|-- requirements.txt
+|-- page
+|   |-- __init__.py
+|   |-- login_page.py
+    |-- customer_page.py
+    |-- Knowledge_page.py
+|--tests/
+
+|   |-- pytest.ini
+|   |-- test_Login
+       |-- Login_successfully.py
+       |-- Invalid_email.py
+       |-- Invalid_pass.py
+       |-- blank_email.py
+       |-- blank_pass.py
+    |-- test_Customer_page
+        |-- TC_01.py
+        |-- TC_02.py
+        |-- TC_03.py
+        ....
+    |-- test_Knowledge_page
+        |-- Delete_file_successfully.py
+        |-- Delete_file_cancel.py
+        |-- Download_file_successfully.py
+        |-- Download_file_cancel.py
+        ....
+        
+|--README.md
+|--Dashboard
+
+Replace the file.py names in the structure with the names of the test cases.

@@ -1,0 +1,70 @@
+1.Login feature
+Read the test cases from `login_test_case.csv` and write Playwright test scripts in Python.
+
+Use this setup from B1 cell:
+Generate a test function using `pytest` for each test case:
+- Test_case: from B3-B7 cell
+- Step: from E3-E7 cell
+Verify: 
+- Expect result: from G3-G7 cell
+
+2. Customer page
+Read the test cases from `customer_test_case.csv` and write Playwright test scripts in Python.
+
+Use this setup from B1 cell:
+Generate a test function using `pytest` for each test case:
+- Test_case: from B3-B11 cell
+- Step: from E3-E11 cell
+Verify: 
+- Expect result: from G3-G11 cell
+
+
+3. Knowledge page
+Read the test cases from `Knowledge_test_case.csv` and write Playwright test scripts in Python.
+
+Use this setup for page from B1 cell:
+Generate a test function using `pytest` for each test case:
+After login successfully, go to knowledge page and perform the test case.
+- Test_case: There are 4 testcase from B3-B6 cell
+- Step: from E3-E6 cell
+Verify: 
+- Expect result: from G3-G6 cell
+
+
+
+✅ After both scenarios are validated:
+Close the browser.
+Once the MCP server finished the code gen, use the code generated under temp_codegen and transpile it to Typescript Cypress Framework using the code generated as reference.
+
+Once you have the code gen thru the MCP server, and use the code generated. Organize the project insite this folder.
+
+The folder struct must follow this format:
+mcp-playwright-cx/
+|-- requirements.txt
+|-- page
+|   |-- __init__.py
+|   |-- login_page.py
+    |-- customer_page.py
+    |-- Knowledge_page.py
+|--tests/
+
+|   |-- pytest.ini
+|   |-- test_Login
+       |-- Login_successfully.py
+       |-- Invalid_email.py
+       |-- Invalid_pass.py
+       |-- blank_email.py
+       |-- blank_pass.py
+    |-- test_Customer_page
+        |-- TC_01.py
+        |-- TC_02.py
+        |-- TC_03.py
+        ....
+    |-- test_Knowledge_page
+        |-- Delete_file_successfully.py
+        |-- Delete_file_cancel.py
+        |-- Download_file_successfully.py
+        |-- Download_file_cancel.py
+        ....
+        
+|--README.md
